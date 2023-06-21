@@ -35,7 +35,7 @@ class App extends React.Component {
     }
     let data = this.state.data.results[0];
     return(
-        <> 
+        <>
         <div>
             <ul>
               <li>
@@ -68,10 +68,11 @@ class App extends React.Component {
               </li>
             </ul>
         </div>
-        
+
     </>
-    ) 
+    )
   }
 }
 
 export default App;
+
