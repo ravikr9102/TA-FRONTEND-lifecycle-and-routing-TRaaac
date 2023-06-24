@@ -4,6 +4,7 @@ You have to create a dashboard layout with a sidebar and main panel. The sidebar
 
 For help you can take a look at https://reactrouter.com/web/guides/quick-start
 
+
 ### App Demo:
 
 [Routing Practice](https://q5on1.csb.app/)
@@ -21,31 +22,5 @@ For help you can take a look at https://reactrouter.com/web/guides/quick-start
 - On the individual article page you will show the slug
 
 ```json
-[
-  {
-    "title": "How to handle state in React. The missing FAQ.",
-    "author": "Osmel Mora",
-    "slug": "handle-state-in-react"
-  },
-  {
-    "title": "You might not need React Router",
-    "author": "Konstantin Tarkus",
-    "slug": "no-need-to-use-react-router"
-  },
-  {
-    "title": "Mixins Considered Harmful",
-    "author": "Dan Abramov",
-    "slug": "mixins-considered-harmful"
-  },
-  {
-    "title": "React Design Principles",
-    "author": "Dan Abramov",
-    "slug": "react-design-principles"
-  },
-  {
-    "title": "Don't use .bind() when passing props",
-    "author": "Dave Ceddia",
-    "slug": "don-use-bind-when-passing-props"
-  }
-]
+
 ```
