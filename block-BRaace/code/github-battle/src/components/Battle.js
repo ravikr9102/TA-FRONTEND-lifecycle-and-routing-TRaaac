@@ -48,7 +48,7 @@ class Battle extends React.Component {
       <div>
          <InstructioforUsers />
         <div>
-          <h2 className='center'>Players</h2>
+          <h2 className='center player-heading'>Players</h2>
           <div className='players'>
             <div>
               {this.state.playerOneIsvisible ? (
@@ -59,7 +59,7 @@ class Battle extends React.Component {
                   <input
                     type="text"
                     name="username"
-                    placeholder="Github username"
+                    placeholder="Enter Github username"
                     onChange={(e) => this.handlePlayerOne(e)}
                     value={this.state.inputText}
                   />
@@ -76,7 +76,7 @@ class Battle extends React.Component {
                   <input
                     type="text"
                     name="username"
-                    placeholder="Github username"
+                    placeholder="Enter Github username"
                     onChange={(e) => this.handlePlayerTwo(e)}
                     value={this.state.inputText}
                   />
@@ -86,19 +86,13 @@ class Battle extends React.Component {
             </div>
           </div>
           {this.state.playerOneIsvisible && this.state.playerTwoIsvisible ? (
-            <div className="text-center">
+            <div className="text-center battle-btn">
               <Link
                 to={`/battle/result/${this.state.playerOne}&&${this.state.playerTwo}`}
               >
                 <button>Battle</button>
               </Link>
-              {/* <Link
-              to={{
-                pathname: '/battle/result',
-                search: `?playerOne=${this.state.playerOne}&playerTwo=${this.state.playerTwo}`,
-              }}>
-              Battle
-            </Link> */}
+             
             </div>
           ) : (
             ''
@@ -139,23 +133,23 @@ function InstructioforUsers() {
   return (
     <>
       <div>
-        <h2 className="center">Instructions</h2>
+        <h2 className="text-center">Instructions</h2>
         <div className="wrapper">
           <div className="instruction-card">
-            <h2>Enter two Github users</h2>
+            <h2>Enter two Github username</h2>
             <div className="instruction-icon star">
               <i className="fas fa-user-friends users"></i>
             </div>
           </div>
           <div className="instruction-card">
-            <h2>Battle</h2>
+            <h2 className="text-center">Battle</h2>
             <div className="instruction-icon  fork">
               <i className="fas fa-fighter-jet battle"></i>
             </div>
           </div>
 
           <div className="instruction-card">
-            <h2>See the Winner</h2>
+            <h2 className="text-center">See the Winner</h2>
             <div className="instruction-icon  issue">
               <i className="fas fa-trophy winner"></i>
             </div>

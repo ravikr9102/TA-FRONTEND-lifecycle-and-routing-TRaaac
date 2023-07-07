@@ -15,7 +15,7 @@ root.render(
   <BrowserRouter>
   <Header />
   <Routes>
-    <Route path='/' exact element={<App />} />
+    <Route path='/' exact='true' element={<App />} />
     <Route path='/Battle' element={<Battle />} />
     <Route path="/battle/result/:player" element={<Result />} />
   </Routes>

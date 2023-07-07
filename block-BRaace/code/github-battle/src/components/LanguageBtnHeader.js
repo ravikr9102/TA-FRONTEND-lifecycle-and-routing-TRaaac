@@ -8,6 +8,7 @@ function LanguageBtnHeader(props) {
         {languages.map((language) => {
           return (
             <button
+              key={language}
               className={props.value === language ? 'active' : ''}
               onClick={props.handleClick}
             >

@@ -83,6 +83,9 @@ ul,li {
 .issue i {
   color: #F18A93;
 }
+.fetch{
+  padding: 1.3rem 0;
+}
 
 /* Battle */
 .wrapper{
@@ -106,7 +109,11 @@ ul,li {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 1.8rem 0;
 }
+/* .player-heading{
+  m
+} */
 .players label{
   display: block;
 }
@@ -133,4 +140,76 @@ ul,li {
   border-radius: 50%;
   margin: 0 .5rem;
   object-fit: cover;
+}
+.battle-btn{
+  margin: 2rem 0;
+}
+.battle-btn button{
+  padding: .4rem 4.5rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+/* Result */
+.battling-players{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
+.battling-players img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.space-around {
+  justify-content: space-around;
+}
+.container-sm {
+  width: 80%;
+  margin: 0 auto;
+}
+.winner-info{
+  margin: 1rem;
+  background-color: #EBEBEB;
+  padding: 2rem;
+}
+.score{
+  font-size: 1rem;
+  padding: 1.1rem 0;
+  font-weight: 900;
+}
+.username{
+  padding-bottom: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #BA3126;
+}
+.winner-info p{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.winner-info i{
+  padding: 0 .4rem;
+}
+.result-user{
+  color: #EF7373;
+}
+.result-location{
+  color: #9172FA;
+}
+.result-follower{
+  color: #81C3F5;
+}
+.result-following{
+  color: #55B75F;
+}
+.result-repo{
+  color: #3B4C55;
 }
