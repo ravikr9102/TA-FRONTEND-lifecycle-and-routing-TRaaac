@@ -11,7 +11,7 @@ class Popular extends React.Component {
     };
   }
   componentDidMount() {
-    let data = fetch(
+    fetch(
       'https://api.github.com/search/repositories?q=stars:%3E1+language:All&sort=stars&order=desc&type=Repositories'
     )
       .then((res) => res.json())
@@ -24,7 +24,7 @@ class Popular extends React.Component {
 
   handleClick = ({ target }) => {
     let value = target.innerText;
-    let allUsers = fetch(
+    fetch(
       `https://api.github.com/search/repositories?q=stars:%3E1+language:${value}&sort=stars&order=desc&type=Repositories`
     )
       .then((res) => res.json())
@@ -44,7 +44,7 @@ class Popular extends React.Component {
           value={this.state.language}
         />
         {this.state.data === null || this.state.data === undefined ? (
-          <h1>Fetching Repos...</h1>
+          <h1 className='text-center fetch'>Fetching Repos...</h1>
         ) : (
           <Cards Data={this.state.data.items} />
         )}

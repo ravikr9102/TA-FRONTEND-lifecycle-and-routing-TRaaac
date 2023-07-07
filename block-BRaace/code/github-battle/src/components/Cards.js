@@ -6,7 +6,7 @@ function Cards(props) {
     <ul className="repo-list">
       {data.map((userData, index) => {
         return (
-          <li>
+          <li key={index}>
             <div className="text-center">
               <h4>#{index + 1}</h4>
               <figure>
@@ -15,7 +15,7 @@ function Cards(props) {
               <h5>{userData.name}</h5>
             </div>
             <p>
-              <i class="fas fa-user"></i>
+              <i className="fas fa-user"></i>
               {userData.name}
             </p>
             <p className='star'>
