@@ -7,42 +7,86 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-ul,li {
+ul,
+li {
   list-style: none;
+}
+a{
+  text-decoration: none;
 }
 .text-center {
   text-align: center;
 }
 .active {
-  color: #BA3126;
+  color: #ba3126;
 }
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Loader */
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.bouncing-loader > div {
+  width: 16px;
+  height: 16px;
+  margin: 3rem 0.2rem;
+  background: #8385aa;
+  border-radius: 50%;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.active {
+  color: red;
+  font-weight: 600;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
 /* Header */
-.nav{
-    display: flex;
+.nav {
+  display: flex;
 }
-.nav li{
-    margin: 3rem .5rem;
-    font-weight: 900;
-    font-size: 1.2rem;
+.nav li {
+  margin: 3rem 0.5rem;
+  font-weight: 900;
+  font-size: 1.2rem;
 }
-.link{
+.link {
   text-decoration: none;
 }
 
+
 /* LanguageButtonHeader */
-.language-nav button{
-    border: none;
-    margin: 0 .8rem;
-    background-color: #fff;
-    font-weight: 900;
-    font-size: 1.2rem;
+.language-nav button {
+  border: none;
+  margin: 0 0.8rem;
+  background-color: #fff;
+  font-weight: 900;
+  font-size: 1.2rem;
 }
+
 
 /* cards item */
 .repo-list {
@@ -55,7 +99,7 @@ ul,li {
 }
 .repo-list li {
   padding: 20px;
-  background-color: #EAEBEA;
+  background-color: #eaebea;
 }
 .repo-list img {
   max-width: 180px;
@@ -63,89 +107,87 @@ ul,li {
   margin: 24px 0;
 }
 .repo-list h5 {
-  color: #BA3126;
+  color: #ba3126;
 }
 .repo-list p {
-  margin-top: .7rem;
+  margin-top: 0.7rem;
   font-size: 1.2rem;
   font-weight: 500;
 }
-.repo-list i{
-  padding: 0 .7rem;
-  color: #FDBF74;
+.repo-list i {
+  padding: 0 0.7rem;
+  color: #fdbf74;
 }
-.star i{
-  color: #FED838;
+.star i {
+  color: #fed838;
 }
-.fork i{
-  color: #81C3F5;
+.fork i {
+  color: #81c3f5;
 }
 .issue i {
-  color: #F18A93;
+  color: #f18a93;
 }
-.fetch{
+.fetch {
   padding: 1.3rem 0;
 }
 
 /* Battle */
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.instruction-card{
+.instruction-card {
   margin: 3rem;
 }
-.instruction-icon{
+.instruction-icon {
   width: 200px;
   height: 200px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   font-size: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.players{
+.players {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 1.8rem 0;
 }
-/* .player-heading{
-  m
-} */
-.players label{
+
+.players label {
   display: block;
 }
-.players input{
-  padding: .3rem 1rem;
+.players input {
+  padding: 0.3rem 1rem;
 }
-.submit{
-  margin: .5rem;
-  padding: .3rem 1.5rem;
+.submit {
+  margin: 0.5rem;
+  padding: 0.3rem 1.5rem;
 }
-.player-info{
+.player-info {
   width: 400px;
   height: 100px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   display: flex;
   align-items: center;
-  color: #BA3126;
+  color: #ba3126;
   font-weight: 900;
   font-size: 1.2rem;
 }
-.player-img{
+.player-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   object-fit: cover;
 }
-.battle-btn{
+.battle-btn {
   margin: 2rem 0;
 }
-.battle-btn button{
-  padding: .4rem 4.5rem;
+.battle-btn button {
+  padding: 0.4rem 4.5rem;
   background-color: #000;
   color: #fff;
   border: none;
@@ -153,13 +195,13 @@ ul,li {
 }
 
 /* Result */
-.battling-players{
+.battling-players {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   justify-content: center;
 }
-.battling-players img{
+.battling-players img {
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -175,41 +217,53 @@ ul,li {
   width: 80%;
   margin: 0 auto;
 }
-.winner-info{
+.winner-info {
   margin: 1rem;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   padding: 2rem;
 }
-.score{
+.score {
   font-size: 1rem;
   padding: 1.1rem 0;
   font-weight: 900;
 }
-.username{
+.username {
   padding-bottom: 1.2rem;
   font-size: 1.4rem;
   font-weight: 900;
-  color: #BA3126;
+  color: #ba3126;
 }
-.winner-info p{
+.winner-info p {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.winner-info i{
-  padding: 0 .4rem;
+.winner-info i {
+  padding: 0 0.4rem;
 }
-.result-user{
-  color: #EF7373;
+.result-user {
+  color: #ef7373;
 }
-.result-location{
-  color: #9172FA;
+.result-location {
+  color: #9172fa;
 }
-.result-follower{
-  color: #81C3F5;
+.result-follower {
+  color: #81c3f5;
 }
-.result-following{
-  color: #55B75F;
+.result-following {
+  color: #55b75f;
 }
-.result-repo{
-  color: #3B4C55;
+.result-repo {
+  color: #3b4c55;
 }
+
+/* Footer */
+.footer{
+  margin: 4rem 0;
+}
+.footer h5{
+  font-size: 1rem;
+  font-weight: 900;
+  color: #81c3f5;
+  word-spacing: 2px;
+}
+
