@@ -63,7 +63,7 @@ class Battle extends React.Component {
                     onChange={(e) => this.handlePlayerOne(e)}
                     value={this.state.inputText}
                   />
-                  <input className='submit' type="submit" value="submit" />
+                  <input disabled={!this.state.playerOne} className='submit' type="submit" value="submit" />
                 </form>
               )}
             </div>
@@ -80,7 +80,7 @@ class Battle extends React.Component {
                     onChange={(e) => this.handlePlayerTwo(e)}
                     value={this.state.inputText}
                   />
-                  <input className='submit' type="submit" value="submit" />
+                  <input disabled={!this.state.playerTwo} className='submit' type="submit" value="submit" />
                 </form>
               )}
             </div>
@@ -107,7 +107,9 @@ export default Battle;
 
 function PlayerOne(props) {
   if (!props.playerOne) {
-    return <>Loading...</>;
+    return(
+     <h3 className='text-center'>Loading...</h3>
+    ) 
   }
   return (
     <div className='player-info'>
@@ -118,7 +120,9 @@ function PlayerOne(props) {
 }
 function PlayerTwo(props) {
   if (!props.playerTwo) {
-    return <>Loading...</>;
+    return(
+      <h3 className='text-center'>Loading...</h3>
+    ) 
   }
   return (
     <div className='player-info'>

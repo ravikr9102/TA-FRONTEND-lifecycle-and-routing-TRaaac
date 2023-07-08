@@ -1,6 +1,7 @@
 import React from 'react';
 import LanguageBtnHeader from './LanguageBtnHeader';
 import Cards from './Cards';
+import Loader from './Loader';
 
 class Popular extends React.Component {
   constructor() {
@@ -44,7 +45,7 @@ class Popular extends React.Component {
           value={this.state.language}
         />
         {this.state.data === null || this.state.data === undefined ? (
-          <h1 className='text-center fetch'>Fetching Repos...</h1>
+          <Loader />
         ) : (
           <Cards Data={this.state.data.items} />
         )}
