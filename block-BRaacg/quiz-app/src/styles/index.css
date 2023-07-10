@@ -1,0 +1,9 @@
+select{
+    margin: 2rem;
+}
+.form{
+    border: 1px solid red;
+}
+.form input{
+    cursor: pointer;
+}
