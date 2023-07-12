@@ -1,12 +1,15 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Categories from './Categories';
-import Difficulty from './Difficulty';
+import Quiz from './Quiz';
 
 export default function App() {
   return (
     <>
-      <Categories />
-      <Difficulty />
+    <Routes>
+      <Route path="/" element={<Categories />} />
+      <Route path="/quiz" element={<Quiz />} />
+    </Routes>
     </>
   );
 }
