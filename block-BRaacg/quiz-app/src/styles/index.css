@@ -1,0 +1,66 @@
+body{
+    background-image: url('../components/quiz-word-concept_23-2147844150.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.quiz{
+  margin-top: 8%;
+}
+ul,li{
+  list-style: none;
+}
+.result{
+  border: 2px solid blue;
+  cursor: pointer;
+  padding: .2rem 1rem;
+  border-radius: 3px;
+}
+.result:hover{
+  border: 2px solid blue;
+  background-color: #fff;
+}
+.disable {
+  pointer-events: none;
+}
+.next{
+  color: red;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+/* Loader */
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.bouncing-loader > div {
+  width: 16px;
+  height: 16px;
+  margin: 3rem 0.2rem;
+  background: #8385aa;
+  border-radius: 50%;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.active {
+  color: red;
+  font-weight: 600;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
